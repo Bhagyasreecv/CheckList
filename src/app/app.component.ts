@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'checkList';
+  newItem;
+  checkList = ['Drink Water', 'Have Lunch'];
+  completedList = [];
+
+  AddItem(item) {
+    this.checkList.push(item);
+    this.newItem = '';
+  }
+  completedItem(event) {
+    console.log(event);
+  }
 }
